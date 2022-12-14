@@ -1,0 +1,77 @@
+  <% include ./partial/header %>
+  <% include ./partial/studfunction %> 
+  
+  <div
+  class="col-sm-6"
+  style="    flex: 0 0 50%;
+  max-width: 60%;
+  margin-left: 431px;
+  margin-top: -181px;  text-align: -webkit-center;"
+  >
+        <div class="thumbnail">
+          <Center>
+          <h4>Name: <%=student.name%></h4>
+      
+
+          <h4>Username: <%=student.username%></h4>
+          <h4>Location:<%=student.department%></h4>
+          <h4>Phone: <%=student.hostel%></h4>
+        </div>
+      </div>
+    </Center>
+      <div class="container" >
+        <table class="content-table"
+        style="margin: 50px auto;min-width:400px;width: 90%; box-shadow: 0 0 20px rgba(0,0,0,0.15);">
+          <tr  style="background-color: rgb(9, 1, 19); border-radius: 5px 5px 0 0;overflow: hidden;  color: #ffffff;text-align: left; font-weight: bold;"
+          >
+            <th>
+              Car Id
+            </th>
+            <th>
+              From
+            </th>
+            <th>To</th>
+            <th>Days</th>
+            <th>Price</th>
+          </tr>
+          <%student.leaves.forEach(function(leave){%>
+
+          <tr>
+            <td><%=leave.subject%></td>
+            <td><%=moment(leave.from).format('DD/MM/YYYY')%></td>
+            <td><%=moment(leave.to).format('DD/MM/YYYY')%></td>
+            <td><%=leave.days%></td>
+            <td><button onclick="myFunction()">Price</button></td>
+          </tr>
+
+          <%})%>
+        </table>
+      </div>
+
+      <% include ./partial/footer %>
+    </div>
+  </div>
+  <center>
+  Car Prize:<p id="demo"></p><br>
+  GST:<p id="demo1"></p><br>
+  Total:<p id="demo2"></p><br>
+  <a href="/total"><button>Payment</button></a>
+  </center>
+
+  
+
+  <script>
+    function myFunction(){
+    a=Math.floor(Math.random() * 1000)+2000;
+    b=Math.floor(Math.random() * 200)+100;
+    console.log(a)
+    c=a+b;
+  document.getElementById("demo").innerHTML =a;
+
+  document.getElementById("demo1").innerHTML =b;
+
+  document.getElementById("demo2").innerHTML =c;}
+
+  </script>
+  
+

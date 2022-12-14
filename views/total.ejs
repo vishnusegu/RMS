@@ -1,0 +1,96 @@
+<% include ./partial/header %>
+
+<head>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script>
+    var myapp = angular.module('myapp', [])
+    myapp.controller('control', function($scope) {
+      $scope.validate_form = function(event){
+        if($scope.firstName == undefined && $scope.lastName == undefined){
+          alert("First Name and Last Name Cannot Be Empty")
+        }
+        
+        if($scope.username == undefined){
+          alert("holder name Cannot Be Empty")
+        }
+        if($scope.email == undefined){
+          alert("Email Cannot Be Empty")
+        }
+        if($scope.password == undefined){
+          alert("CVV Cannot Be Empty")
+        }
+        if($scope.repassword == undefined){
+          alert("Exp date cannot be empty")
+        }
+        
+        
+        if(($scope.firstName).charAt(0) != (($scope.firstName).charAt(0)).toUpperCase()){
+          alert("First Letter of First Name Should Be A Capital Letter")
+        }
+        if(($scope.lastName).charAt(0) != (($scope.lastName).charAt(0)).toUpperCase()){
+          alert("First Letter of Last Name Should Be A Capital Letter")
+        }
+        
+      }
+    })
+  </script>
+</head>
+
+<section ng-app="myapp" ng-controller = "control" id="usersignUpForm">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-header text-center">
+            <h4>Payment gateway</h4>
+          </div>
+          <div class="card-block">
+            <form class="p-3"  method="POST" action="/">
+              <div class="form-group">
+                <label class="form-control-label">First Name</label>
+                <input ng-model="firstName" id="firstName" type="text" name="firstName" placeholder="firstName" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label">Last Name</label>
+                <input type="text" ng-model="lastName"id="lastName" name="lastName" placeholder="lastName" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-control-label">PAYMENT METHODS</label>
+                <select name="gender" id="gender"  class="form-control">
+                  <option name="pay">Phonepay</option>
+                  <option name="credit">credit card</option>
+                  <option name="debit">debit card</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label">Card holder name</label>
+                <input type="text" ng-model="username" id="username" name="username" placeholder="Username" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label">Email</label>
+                <input type="email" ng-model="email" id="email" name="email" placeholder="Email" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label">CVV</label>
+                <input type="number" ng-model="password"id="password" name="password" placeholder="CVV" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label">EXP DATE</label>
+                <input type="date" ng-model="repassword" id="repassword" name="repassword" placeholder="RePassword" class="form-control" required />
+              </div>
+              <button ng-click="validate_form()" type="submit"  class="btn btn-primary btn-block">Submit</button>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% include ./partial/footer %>

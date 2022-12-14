@@ -1,0 +1,12 @@
+<!DOCTYPE note
+[
+<!ELEMENT cars (cid, cname, days, discount, category, location, price, enddate)>
+<!ELEMENT cid ID #REQUIRED>
+<!ELEMENT cname PCDATA #REQUIRED>
+<!ELEMENT days (#PCDATA)>
+<!ELEMENT discount (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT location (#IDREF)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT enddate PCDATA #IMPLIED>
+]>

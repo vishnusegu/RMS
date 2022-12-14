@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note SYSTEM "product.dtd">
+
+<cars>
+   <car>
+      <cid>1</cid>
+      <cname>BMW</cname>
+      <days>2</days>
+      <discount>$10</discount>
+      <category>3 series</category>
+      <location>New york</location>
+      <price>$330</price>
+      <enddate>12-2-2023</enddate>
+   </car>
+   <car>
+      <cid>2</cid>
+      <cname>Volkswagen</cname>
+      <days>3</days>
+      <discount>$15</discount>
+      <category>T-cross</category>
+      <location>Banglore</location>
+      <price>$420</price>
+      <enddate>13-5-2023</enddate>
+   </car>
+   <car>
+      <cid>3</cid>
+      <cname>Cadillasc</cname>
+      <days>5</days>
+      <discount>$25</discount>
+      <category>Escalade</category>
+      <location>Palamaner</location>
+      <price>$550</price>
+      <enddate>12-8-2022</enddate>
+   </car>
+</cars>

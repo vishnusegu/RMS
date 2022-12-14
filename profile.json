@@ -1,0 +1,36 @@
+[
+    {
+        "cid":"1",
+        "cname":"BMW",
+        "days":"2",
+        "discount":"$10",
+        "category":"3 Series",
+        "location":"New york",
+        "price":"$330",
+        "enddate":"12-2-2023"
+        },
+        {
+            "cid":"2",
+            "cname":"Volkswagen",
+            "days":"3",
+            "discount":"$15",
+            "category":"T-Cross",
+            "location":"Banglore",
+            "price":"$420",
+            "enddate":"13-5-2023"
+            },
+            {
+                "cid":"3",
+                "cname":"Cadillasc",
+                "days":"5",
+                "discount":"$25",
+                "category":"Escalade",
+                "location":"Palamaner",
+                "price":"$550",
+                "enddate":"12-8-2022"
+                }
+        
+  
+ 
+                             
+]

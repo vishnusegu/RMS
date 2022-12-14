@@ -1,0 +1,279 @@
+<% include ./partial/header %> <% include ./partial/studfunction %>
+
+<div
+  class="col-sm-6"
+  style="    flex: 0 0 50%;
+max-width: 50%;
+margin-left: 431px;
+margin-top: -181px;  text-align: -webkit-center;"
+>
+  <h1>Enter your car id that you wish to rent <%=student.name%></h1>
+  <form action="/student/<%=student._id%>/apply" method="POST">
+    <div class="form-group">
+      <input
+        type="text"
+        placeholder="Car id"
+        name="leave[subject]"
+        class="form-control"
+      />
+
+    </div>
+    <div class="form-group">
+      <label for="from">From:</label>
+      <input
+        type="date"
+        data-date-inline-picker="true"
+        id="from"
+        name="leave[from]"
+      />
+    </div>
+    <div class="form-group">
+      <label for="to">To:</label>
+      <input
+        type="date"
+        data-date-inline-picker="true"
+        id="to"
+        name="leave[to]"
+      />
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-lg btn-block btn-default">Submit</button>
+    </div>
+  </form>
+
+  <% include ./partial/footer %>
+</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #ww{
+                height:"600px";
+                width:"1500px";
+                border:black 0px;
+            }
+            #box{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 30px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+
+            }
+            #box2{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 50px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+            #box3{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 70px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+                
+            }
+            #box4{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 90px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+            .main{
+                font-size: 3em;
+                text-align: center;
+                color:white;
+            }
+            #box5{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 50px;
+                margin-top: 50px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+
+            }
+            #box6{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 30px;
+                margin-top: 50px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+            #box7{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 90px;
+                margin-top: 50px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+            #box8{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 70px;
+                margin-top: 50px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+            #box9{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 30px;
+                margin-top: 70px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+            #box10{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 90px;
+                margin-top: 70px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+            #box11{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 30px;
+                margin-top: 70px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+            #box12{
+                height:500px;
+                width:300px;
+                text-align: center;
+                overflow: hidden;
+                background-color:white;
+                color:black;
+                font-size:1em;
+                float: left;
+                margin-left: 90px;
+                margin-top: 70px;
+                letter-spacing: 0.1em;
+                word-spacing: 0.1em;
+            }
+        
+        
+            </style>
+    </head>
+    <body style="background-color: black;">
+        
+        <h1 class="main">Select your car</h1>
+        
+            <div id="box"><img src="https://www.carflexi.com/content/img/shared/k07/k07_492_medium.jpg?st=17828&pr=7495" width="300px" height="250px"><h1>Mitsubishi Mirage</h1><p><B>
+              Amount: 2000-3000<br>
+              Car Id:1<br>
+
+              </p></div>
+            <div id="box2"><img src="https://www.carflexi.com/content/img/shared/k07/k07_236_medium.jpg?st=9863&pr=7100" width="300px" height="250px"><h1>Nissan Note</h1>
+              Amount: 2000-3000<br>
+              Car Id:2<br>
+             </div>
+            <div id="box3"><img src="https://www.carflexi.com/content/img/shared/k07/k07_486_medium.jpg?st=17208&pr=7494" height="250px"><h1>VW Up</h1>
+              Amount: 2000-3000<br>
+              Car Id:3<br></div>
+            <div id="box4"><img src="https://www.carflexi.com/content/img/shared/k07/k07_17_medium.jpg?st=9863&pr=7100" width="300px" height="250px"><h1>Ford Fiesta</h1>
+              Amount: 2000-3000<br>
+              Car Id:4<br></div>
+            
+             
+            <div id="box6"><img src="https://www.carflexi.com/content/img/shared/k07/k07_39_medium.jpg?st=17208&pr=7494"><h1>Nissan Versa</h1>
+              Amount: 2000-3000<br>
+              Car Id:5<br></div>
+            <div id="box5"><img src="https://www.carflexi.com/content/img/shared/k07/k07_181_medium.jpg?st=17208&pr=7494"><h1>Hyundai Elantra</h1>
+              Amount: 2000-3000<br>
+              Car Id:6<br></div>
+        <div id="box8"><img src="https://www.carflexi.com/content/img/shared/k07/k07_58_medium.jpg?st=17208&pr=7494"><h1>Chevrolet Cruze</h1>
+          Amount: 2000-3000<br>
+          Car Id:7<br></div>
+
+        <div id="box7"><img src="https://www.carflexi.com/content/img/shared/k07/k07_361_medium.jpg?st=17208&pr=7494"><h1>Dodge Avenger</h1>
+          Amount: 2000-3000<br>
+          Car Id:8<br></div>
+            <div id="box9"><img src="https://www.carflexi.com/content/img/shared/k07/k07_112_medium.jpg?st=17208&pr=7494"><h1>Chevrolet Impala </h1>
+              Amount: 2000-3000<br>
+              Car Id:9<br></div>
+            <div id="box10"><img src="https://www.carflexi.com/content/img/shared/k07/k07_408_medium.jpg?st=3279&pr=7088"><H1>Chevrolet Trax</H1>
+              Amount: 2000-3000<br>
+              Car Id:10<br></div>
+            <div id="box11"><img src="https://www.carflexi.com/content/img/shared/k07/k07_191_medium.jpg?st=9863&pr=7100">        <h1>Kia Sorento</h1>
+              Amount: 2000-3000<br>
+              Car Id:11<br></div>
+            <div id="box12"><img src="https://www.carflexi.com/content/img/shared/k07/k07_97_medium.jpg?st=17208&pr=7494"><h1>Toyota Rav4</h1>
+              Amount: 2000-3000<br>
+              Car Id:12<br></div>
+    </body>
+</html>
